@@ -9,5 +9,5 @@ const ROOT_ELEMENT = document.getElementById('root')
 
 ReactDOM.render(
   <App />,
-  document.getElementById('root')
+  ROOT_ELEMENT
 )
