@@ -48,7 +48,7 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(this.state.moviesInfo)
+    //console.log(this.state.moviesInfo)
     return (
       <Container fluid style={style.fluid}>
         <Header as='h2' style={style.header}>The Popular Movie Bank</Header>
