@@ -7,7 +7,9 @@ import {
   Card, Icon, Image
 } from 'semantic-ui-react'
 
-import { getImageUrl, getMovieInfo } from '../src/api'
+//import { getImageUrl, getMovieInfo } from '../src/api'
+
+import data from './data.json'
 
 //const API_KEY = `cfe422613b250f702980a3bbf9e90716`
 //const API_URL = `https://api.themoviedb.org/3/movie/popular?&api_key=${API_KEY}`
@@ -40,10 +42,14 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    getMovieInfo().then((data) => {
-      this.setState({
-        moviesInfo: data.results
-      })
+    // getMovieInfo().then((data) => {
+    //   this.setState({
+    //     moviesInfo: data.results
+    //   })
+    // })
+
+    this.setState({
+      moviesInfo: data.results
     })
   }
 
@@ -59,7 +65,7 @@ export default class App extends Component {
               return (
                 <div key={i}>
                   <div>
-                    <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
+                    {/* <img src={getImageUrl(movie.poster_path)} alt={movie.title} /> */}
                     <div>
                       <h3>
                         {movie.title}
