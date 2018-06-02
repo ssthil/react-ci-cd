@@ -2,7 +2,6 @@
 
 exports[`Welcome (Snapshot) renders without crashing 1`] = `
 <div
-  className="ui fluid container"
   style={
     Object {
       "padding": "1em",
@@ -10,7 +9,7 @@ exports[`Welcome (Snapshot) renders without crashing 1`] = `
   }
 >
   <h2
-    className="ui header"
+    as="h2"
     style={
       Object {
         "margin": "1em 0em ",
@@ -22,8 +21,6 @@ exports[`Welcome (Snapshot) renders without crashing 1`] = `
   <p>
     Popular Movies
   </p>
-  <div
-    className="ui very relaxed five column grid"
-  />
+  <div />
 </div>
 `;

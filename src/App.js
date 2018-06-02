@@ -48,40 +48,39 @@ export default class App extends Component {
   }
 
   render() {
-    //console.log(this.state.moviesInfo)
     return (
-      <Container fluid style={style.fluid}>
-        <Header as='h2' style={style.header}>The Popular Movie Bank</Header>
+      <div style={style.fluid}>
+        <h2 as='h2' style={style.header}>The Popular Movie Bank</h2>
         <p>Popular Movies</p>
-        <Grid relaxed='very' columns={5}>
+        <div>
 
           {
             this.state.moviesInfo.map((movie, i) => {
               return (
-                <Grid.Column key={i}>
-                  <Card>
-                    <Image src={getImageUrl(movie.poster_path)} alt={movie.title} />
-                    <Card.Content>
-                      <Card.Header>
+                <div key={i}>
+                  <div>
+                    <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
+                    <div>
+                      <h3>
                         {movie.title}
-                      </Card.Header>
-                      <Card.Meta>
+                      </h3>
+                      <h4>
                         <span className='date'>
                         {movie.release_date}
                         </span>
-                      </Card.Meta>
-                      <Card.Description>
+                      </h4>
+                      <p>
                         {movie.vote_average}
-                      </Card.Description>
-                    </Card.Content>
-                  </Card>
-                </Grid.Column>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               )
             })
           }
 
-        </Grid>
-      </Container>
+        </div>
+      </div>
     )
   }
 }

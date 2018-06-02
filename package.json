@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "test": "jest --env=node"
+    "test": "jest --watch --env=node"
   },
   "dependencies": {
     "axios": "^0.18.0",
